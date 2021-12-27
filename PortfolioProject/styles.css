@@ -18,6 +18,8 @@
     --yellow-color: #f9bf3f;
     --purple-color: #a84cb8;
     --dark-blue-color: #4054b2;
+    --green-color: rgb(26, 160, 77);
+    --red-color: rgb(223, 7, 7);
 }
 
 html{
@@ -55,7 +57,7 @@ a{
 }
 
 .intro{
-    font-family: var(--heading-font-family);
+    font-family: var(--body-font-family);
     text-align: center;
     margin: 5rem 0;
     line-height: l.5;
@@ -268,6 +270,7 @@ section:not(.hero){
 
 .heading-group{
     color: var(--dark-color);
+    margin-top: 5rem;
     margin-bottom: 5rem;
 }
 
@@ -289,6 +292,7 @@ section:not(.hero){
 
 .intro-description p:not(:last-child){
     margin-bottom: 2rem;
+    font-size: 3rem;
 }
 
 .intro-description p span{
@@ -309,6 +313,13 @@ section:not(.hero){
     font-size: 2.4rem;
     font-weight: 300;
     margin-bottom: 2rem;
+}
+
+.call-to-action p span{
+    font-family: var(--heading-font-family);
+    font-weight: bold;
+    color: var(--dark-color);
+    letter-spacing: 1px;
 }
 
 .btn{
@@ -334,7 +345,7 @@ section:not(.hero){
 
 .grid{
     display: grid;
-    grid-template-columns: repeat(aut-fit, minmax(30rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 2.5rem;
 }
 
@@ -348,6 +359,14 @@ section:not(.hero){
 
 .grid-item.orange{
     border-bottom-color: var(--orange-color);
+}
+
+.grid-item.red{
+    border-bottom-color: var(--red-color);
+}
+
+.grid-item.green{
+    border-bottom-color: var(--green-color);
 }
 
 .grid-item.blue{
@@ -368,6 +387,14 @@ section:not(.hero){
 
 .orange i{
     color: var(--orange-color);
+}
+
+.red i{
+    color: var(--red-color);
+}
+
+.green i{
+    color:  var( --green-color);
 }
 
 .blue i{
@@ -422,6 +449,22 @@ section:not(.hero){
     border-right-color: var(--orange-color);
 }
 
+.red .item-skill{
+    background-color: var(--red-color);
+}
+
+.red .item-skill::before{
+    border-right-color: var(--red-color);
+}
+
+.green .item-skill{
+    background-color: var(--green-color);
+}
+
+.green .item-skill::before{
+    border-right-color: var(--green-color);
+}
+
 .blue .item-skill{
     background-color: var(--blue-color); 
 }
@@ -471,7 +514,15 @@ section:not(.hero){
     line-height: 2;
 }
 
+.motto{
+    height: 35vh;
+    background: url("./images/coverPhotos.jpg");
+    position: relative;
+    z-index: 1;
+}
+
 .motto::before{
+   
     content: "";
     width: 100%;
     height: 100%;
@@ -485,18 +536,19 @@ section:not(.hero){
 .motto .container{
     height: 100%;
     display: flex;
+    
 }
 
 .quote-wrapper{
     margin: auto;
-    max-width: 50em;
+    max-width: 50rem;
     text-align: center;
     color: var(--light-color);
 }
 
 .quote{
     font-size: 2rem;
-    font-weight: 300;
+    font-weight: 700;
     padding: .5rem;
     position: relative;
 }
@@ -507,7 +559,7 @@ section:not(.hero){
     font-size: 15rem;
     width: 5rem;
     height: 5rem;
-    font-family: sans-self;
+    font-family: sans-serif;
 }
 
 .quote::before{
@@ -528,14 +580,16 @@ section:not(.hero){
     margin-top: 2rem;
 }
 
+/* Work Experience */
+
 .timeline{
     position: relative;
 }
 
 .timeline::before,
-.tiemline::after
+.timeline::after,
 .timeline-item::before,
-.tiemline-item::after{
+.timeline-item::after{
     content: "";
     position: absolute;
 }
@@ -547,7 +601,7 @@ section:not(.hero){
     border-radius: 1rem;
     top: 50%;
     left: 0;
-    transform: translateY(-50%)
+    transform: translateY(-50%);
 }
 
 .timeline::after{
